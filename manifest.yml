@@ -1,0 +1,14 @@
+---
+applications:
+- name: s3-mirroring-app
+  memory: 256M
+  disk_quota: 1G
+  instances: 1
+  health-check-type: process
+  buildpack: binary_buildpack
+  no-route: true
+  services:
+  - s3-source
+  - s3-target
+  path: .
+  command: app.sh
