@@ -38,4 +38,7 @@ echo '{
 
 # =============================================================================================
 echo "mirroring buckets ..."
-./mc -C . mirror --overwrite --watch -a source/ target/
+while true; do
+	./mc -C . mirror --overwrite -a source/ target/
+	sleep 600
+done
