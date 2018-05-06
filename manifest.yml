@@ -11,7 +11,7 @@ applications:
   - s3-source
   - s3-backup-target
   path: .
-  command: app.sh
+  command: ./app.sh
   env:
     SOURCE_SERVICE_NAME: s3-source
     TARGET_SERVICE_NAME: s3-backup-target
