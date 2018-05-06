@@ -1,6 +1,6 @@
 ---
 applications:
-- name: s3-mirroring-app
+- name: s3-mirroring
   memory: 256M
   disk_quota: 1G
   instances: 1
@@ -9,6 +9,9 @@ applications:
   no-route: true
   services:
   - s3-source
-  - s3-target
+  - s3-backup-target
   path: .
   command: app.sh
+  env:
+    SOURCE_SERVICE_NAME: s3-source
+    TARGET_SERVICE_NAME: s3-backup-target

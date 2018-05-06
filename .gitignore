@@ -16,11 +16,14 @@
 # binaries
 cf
 mc
+jq
 
 # stuff
 LICENSE
 NOTICE
 .env_private
+config.json
+share/
 
 # archives
 *.zip
